@@ -1,15 +1,21 @@
 angular.module('nepo.directives', [])
-.directive('nepoCanvas', function(loaderService){
+.directive('nepoCanvas', function(loaderService, Abacus, Column, Piece){
 	"use strict";
 	return {
 		restrict: "E",
 		replace: true,
 		scope: {},
-		template: "<canvas width='100%' height='100%'></canvas>",
+		template: "<canvas id='game-container'></canvas>",
 		link: function(scope, element, attribute){
-			var w, h, loader, manifest, table, pieces;
+			var w, h, ratio;
 			drawGame();
 			function drawGame(){
+				setStage();
+				resize();
+				loaderService.getLoader().addEventListener('complete', handleComplete);
+				loaderService.loadAssets();
+			}
+			function setStage(){
 				if(scope.stage){
 					scope.stage.autoClear = true;
 					scope.stage.removeAllChildren();
@@ -17,18 +23,30 @@ angular.module('nepo.directives', [])
 				}else{
 					scope.stage = new createjs.Stage(element[0]);
 				}
-				w = scope.stage.canvas.width;
-				h = scope.stage.canvas.height;
-				loaderService.getLoader().addEventListener('complete', handleComplete);
-				loaderService.loadAssets();
+				createjs.Ticker.addEventListener("tick", scope.stage);
+				createjs.Ticker.setFPS(60);
+				createjs.Touch.enable(scope.stage);
+				scope.stage.enableMouseOver(50);
+			}
+			function resize(){
+				w = window.innerWidth;
+				h = window.innerHeight;
+				scope.stage.canvas.width = w;
+				scope.stage.canvas.height = h;
+				ratio = {w: w / 4116, h: h / 2390}
 			}
 			function handleComplete(){
-				console.log('complete');
-				createjs.Ticker.timingMode = createjs.Ticker.RAF;
-            	createjs.Ticker.addEventListener("tick", tick);
+				var abacus = new Abacus({_w: w, _h: h, _ratio: ratio});
+				abacus.addToStage(scope.stage);
+				//var column = new Column({_x: w / 2, _y: h / 2, _piece:"btn1", _ratio: ratio});
+				//column.addToStage(scope.stage);
+				var btn1 = new Piece({_pieceName: "btn1", _x: w / 2, _y: h / 2 + 20, _scale: ratio.w});
+				btn1.addToStage(scope.stage);
+				var btn2 = new Piece({_pieceName: "btn1", _x: w / 2, _y: h / 2, _scale: ratio.w});
+				btn2.addToStage(scope.stage);
 			}
-			function tick(event){
-				scope.stage.update(event);
+			function open(e){
+				e.currentTarget.gotoAndPlay('open');
 			}
 		}
 	}
