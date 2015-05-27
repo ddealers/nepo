@@ -3,7 +3,7 @@
 // angular.module is a global place for creating, registering and retrieving Angular modules
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
-angular.module('nepo', ['ionic','ionic-material','nepo.directives', 'nepo.services'])
+angular.module('nepo', ['ionic','ionic-material','nepo.directives', 'nepo.services', 'nepo.ui'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -34,4 +34,7 @@ angular.module('nepo', ['ionic','ionic-material','nepo.directives', 'nepo.servic
     }
   });
   $urlRouterProvider.otherwise('/app/abacus');
-})
+});
+
+var uiClasses = angular.module('nepo.ui', []);
+var servicesProviders = angular.module('nepo.services', []);
