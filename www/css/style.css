@@ -1,1 +1,41 @@
 /* Empty. Add your own CSS if you like */
+/*////////////////////////MENU */
+.menu .bar-header{
+	background: #6C0B2C;
+}
+.bar.bar-stable .title{
+	color: #fff;
+}
+.menu .scroll-content{
+	background: #A41C43;
+}
+.list a.item{
+	color: #6C0B2C;
+	border-bottom: 1px solid;
+}
+.list .item{
+	color: #6C0B2C;
+	border-bottom: 1px solid;
+}
+.toggle.toggle-assertive input:checked+.track {
+  	border-color: #6C0B2C;
+  	background-color: #6C0B2C;
+}
+.toggle .track{
+	border-color: #B3A5AA;
+  	background-color: #B3A5AA;	
+}
+/*////////////////////////PANTALLA ABACO */
+[nav-bar-transition=ios] [nav-bar=entering] .bar, [nav-bar-transition=ios] [nav-bar=active] .bar{
+	background: #A41C43;
+}
+.has-header{
+	background: url(../img/back.png)no-repeat;
+  	background-size: cover;
+}
+.bar .button.button-icon{
+	color: #fff;
+}
+[nav-bar-transition=ios] .back-text, [nav-bar-transition=ios] .buttons, [nav-bar-transition=ios] .title{
+	color: #fff;
+}
