@@ -39,3 +39,46 @@
 [nav-bar-transition=ios] .back-text, [nav-bar-transition=ios] .buttons, [nav-bar-transition=ios] .title{
 	color: #fff;
 }
+.has-header .pageLoad{
+	background: #e8185c;
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	top: 0;
+  	left: 0;
+  	opacity: 1;
+}
+.has-header .pageLoad .back-lines{
+	background: url(../img/lines.png)no-repeat;
+	background-size: contain;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+  	left: 0;
+  	right: 0;
+  	top: 0;
+  	bottom: 0;
+  	margin: auto;
+  	text-align: center;
+}
+.has-header .pageLoad .back-lines .logo{
+  	width: 90%;
+  	margin-top: 20%;
+}
+.has-header .pageLoad .back-lines p{
+	position: relative;
+	color: #fff;
+	font-size: 18px;
+	line-height: 40px;
+	text-align: center;
+	padding-bottom: 55px;
+}
+.has-header .pageLoad .back-lines .icon{
+  	width: 40%;
+}
+@media screen and (min-width: 480px){
+	.pageLoad{
+		opacity: 0;
+		display: none;
+	}
+}
