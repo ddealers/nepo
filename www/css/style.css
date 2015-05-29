@@ -39,7 +39,7 @@
 [nav-bar-transition=ios] .back-text, [nav-bar-transition=ios] .buttons, [nav-bar-transition=ios] .title{
 	color: #fff;
 }
-.has-header .pageLoad{
+.pageLoad{
 	background: #e8185c;
 	height: 100%;
 	width: 100%;
@@ -47,8 +47,9 @@
 	top: 0;
   	left: 0;
   	opacity: 1;
+  	z-index: 100;
 }
-.has-header .pageLoad .back-lines{
+.pageLoad .back-lines{
 	background: url(../img/lines.png)no-repeat;
 	background-size: contain;
 	width: 100%;
@@ -61,11 +62,11 @@
   	margin: auto;
   	text-align: center;
 }
-.has-header .pageLoad .back-lines .logo{
+.pageLoad .back-lines .logo{
   	width: 90%;
   	margin-top: 20%;
 }
-.has-header .pageLoad .back-lines p{
+.pageLoad .back-lines p{
 	position: relative;
 	color: #fff;
 	font-size: 18px;
@@ -73,7 +74,7 @@
 	text-align: center;
 	padding-bottom: 55px;
 }
-.has-header .pageLoad .back-lines .icon{
+.pageLoad .back-lines .icon{
   	width: 40%;
 }
 @media screen and (min-width: 480px){
