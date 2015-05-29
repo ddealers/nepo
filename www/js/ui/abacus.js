@@ -1,17 +1,28 @@
-uiClasses.factory('Abacus', function(loaderService){
+uiClasses.factory('Abacus', function(PreloaderService){
+	/*=========================
+	* properties {ratio, stage}
+	=========================*/
 	function Abacus(properties){
-		this.abacus = new createjs.Bitmap(loaderService.getResult('abacus'));
-		var newX = properties._w / 2 - this.abacus.getBounds().width * properties._ratio.w / 2;
-		var newY = properties._h / 2 - this.abacus.getBounds().height * properties._ratio.h / 2;
-		this.abacus.set({scaleX : properties._ratio.w, scaleY : properties._ratio.h, x: newX, y: newY});
+		this.initialize();
+		this.bitmap = new createjs.Bitmap(PreloaderService.preload.getResult('abacus'));
+		this.bitmap.set({scaleX: properties.ratio, scaleY: properties.ratio});
+		this.addChild(this.bitmap);
+		var _regX = this.getBounds().width / 2;
+		var _regY = this.getBounds().height / 2;
+		this.set({x: properties.stage.canvas.width / 2, y: properties.stage.canvas.height / 2, regX: _regX, regY: _regY});
 	};
-	Abacus.prototype = {
-		addToStage: function(stage){
-			stage.addChild(this.abacus);
-		},
-		removeFromStage: function(stage){
-			stage.removeChild(this.abacus);
-		}
+	Abacus.prototype = new createjs.Container();
+	Abacus.prototype.Container_initialize = Abacus.prototype.initialize;
+    Abacus.prototype.initialize = function() {
+		this.Container_initialize();
+		this.name = 'abacus';
 	};
+	Abacus.prototype.addToStage = function(stage){
+		stage.addChild(this);
+		TweenLite.from(this, 0.5, {alpha: 0, ease: Power2.easeOut});
+	}
+	Abacus.prototype.removeFromStage = function(stage){
+		stage.removeChild(this);
+	}
 	return Abacus;
 });
