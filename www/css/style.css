@@ -39,6 +39,10 @@
 [nav-bar-transition=ios] .back-text, [nav-bar-transition=ios] .buttons, [nav-bar-transition=ios] .title{
 	color: #fff;
 }
+[nav-bar-transition="android"] [nav-bar="entering"] .bar, [nav-bar-transition="android"] [nav-bar="active"] .bar{
+	background: rgb(164, 28, 67);
+  	color: #fff;
+}
 .pageLoad{
 	background: #e8185c;
 	height: 100%;
