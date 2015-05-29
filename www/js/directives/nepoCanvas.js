@@ -1,5 +1,5 @@
 angular.module('nepo.directives', [])
-.directive('nepoCanvas', function(loaderService, Abacus, Column, Piece){
+.directive('nepoCanvas', function($window, PreloaderService, Abacus, Column, Piece){
 	"use strict";
 	return {
 		restrict: "E",
@@ -7,13 +7,13 @@ angular.module('nepo.directives', [])
 		scope: {},
 		template: "<canvas id='game-container'></canvas>",
 		link: function(scope, element, attribute){
-			var w, h, ratio;
-			drawGame();
+			var w, h, r, scene;
+			
 			function drawGame(){
 				setStage();
 				resize();
-				loaderService.getLoader().addEventListener('complete', handleComplete);
-				loaderService.loadAssets();
+				PreloaderService.addEventListener('complete', handleComplete);
+				PreloaderService.loadAssets(scope.stage, w, h);
 			}
 			function setStage(){
 				if(scope.stage){
@@ -29,25 +29,28 @@ angular.module('nepo.directives', [])
 				scope.stage.enableMouseOver(50);
 			}
 			function resize(){
-				w = window.innerWidth;
-				h = window.innerHeight;
+				w = angular.element('.has-header').width();
+				h = angular.element('.has-header').height();
 				scope.stage.canvas.width = w;
 				scope.stage.canvas.height = h;
-				ratio = {w: w / 4116, h: h / 2390}
+				r = w / 4116;
+				if(2390 * r > h){
+					r = h / 2390;	
+				}
+				scene = {width: 4116 * r, height: 2390 * r, ratio: r};
 			}
 			function handleComplete(){
-				var abacus = new Abacus({_w: w, _h: h, _ratio: ratio});
+				var abacus = new Abacus({ratio: scene.ratio, stage: scope.stage});
 				abacus.addToStage(scope.stage);
-				//var column = new Column({_x: w / 2, _y: h / 2, _piece:"btn1", _ratio: ratio});
-				//column.addToStage(scope.stage);
-				var btn1 = new Piece({_pieceName: "btn1", _x: w / 2, _y: h / 2 + 20, _scale: ratio.w});
-				btn1.addToStage(scope.stage);
-				var btn2 = new Piece({_pieceName: "btn1", _x: w / 2, _y: h / 2, _scale: ratio.w});
-				btn2.addToStage(scope.stage);
+				var uu = new Column({x: abacus.getBounds().width * 80 / 100, y: abacus.getBounds().height * 55 / 100, pieceName:"btn1", scale: scene.ratio});
+				var du = new Column({x: abacus.getBounds().width * 75 / 100, y: abacus.getBounds().height * 55 / 100, pieceName:"btn1", scale: scene.ratio});
+				var cu = new Column({x: abacus.getBounds().width * 70 / 100, y: abacus.getBounds().height * 55 / 100, pieceName:"btn1", scale: scene.ratio});
+				abacus.addChild(uu,du,cu);
 			}
 			function open(e){
 				e.currentTarget.gotoAndPlay('open');
 			}
+			drawGame();
 		}
 	}
 });
