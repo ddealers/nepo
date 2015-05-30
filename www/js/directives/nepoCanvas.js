@@ -7,13 +7,14 @@ angular.module('nepo.directives', [])
 		scope: {},
 		template: "<canvas id='game-container'></canvas>",
 		link: function(scope, element, attribute){
-			var w, h, r, scene;
+			var w, h, r, scene, abacus;
 			
 			function drawGame(){
 				setStage();
 				resize();
 				PreloaderService.addEventListener('complete', handleComplete);
 				PreloaderService.loadAssets(scope.stage, w, h);
+				$window.addEventListener('resize', resize);
 			}
 			function setStage(){
 				if(scope.stage){
@@ -38,9 +39,10 @@ angular.module('nepo.directives', [])
 					r = h / 2390;	
 				}
 				scene = {width: 4116 * r, height: 2390 * r, ratio: r};
+				if(abacus) abacus.resize({ratio: scene.ratio, stage: scope.stage});
 			}
 			function handleComplete(){
-				var abacus = new Abacus({ratio: scene.ratio, stage: scope.stage});
+				abacus = new Abacus({ratio: scene.ratio, stage: scope.stage});
 				abacus.addToStage(scope.stage);
 				var uu = new Column({x: abacus.getBounds().width * 80 / 100, y: abacus.getBounds().height * 55 / 100, pieceName:"btn1", scale: scene.ratio});
 				var du = new Column({x: abacus.getBounds().width * 75 / 100, y: abacus.getBounds().height * 55 / 100, pieceName:"btn1", scale: scene.ratio});
