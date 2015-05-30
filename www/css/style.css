@@ -12,18 +12,20 @@
 .list a.item{
 	color: #6C0B2C;
 	border-bottom: 1px solid;
+	font-size: 20px;
 }
 .list .item{
 	color: #6C0B2C;
 	border-bottom: 1px solid;
+	font-size: 20px;
 }
 .toggle.toggle-assertive input:checked+.track {
   	border-color: #6C0B2C;
   	background-color: #6C0B2C;
 }
 .toggle .track{
-	border-color: #B3A5AA;
-  	background-color: #B3A5AA;	
+	border-color: #FF216E;
+  	background-color: #FF216E;	
 }
 /*////////////////////////PANTALLA ABACO */
 [nav-bar-transition=ios] [nav-bar=entering] .bar, [nav-bar-transition=ios] [nav-bar=active] .bar{
