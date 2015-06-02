@@ -32,6 +32,22 @@ angular.module('nepo', ['ionic','ionic-material','nepo.directives', 'nepo.servic
         templateUrl: "templates/abacus.html"
       }
     }
+  })
+  .state('app.thumbnail', {
+    url: "/thumbnail",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/thumbnail.html"
+      }
+    }
+  })
+  .state('app.fichas', {
+    url: "/fichas",
+    views: {
+      'menuContent': {
+        templateUrl: "templates/fichas.html"
+      }
+    }
   });
   $urlRouterProvider.otherwise('/app/abacus');
 });
