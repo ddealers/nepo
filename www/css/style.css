@@ -83,6 +83,35 @@
 .pageLoad .back-lines .icon{
   	width: 40%;
 }
+/*//////////////////////P A N T A L L A S     F O N D O S/////////////////*/
+.contenidoThumbnail .list .item{
+	min-height: 100px;
+}
+.contenidoThumbnail .list:last-child{
+	background: #fff;
+}
+.item-thumbnail-left>img:first-child{
+	border-radius: 0;
+}
+/*//////////////////////P A N T A L L A S     F I C H A S/////////////////*/
+.contenidoFichas .list {
+	background: #fff;
+}
+.contenidoFichas .list .item img{
+	width: 155px;
+  	position: absolute;
+  	right: 35px;
+  	top: 0;
+  	padding: 15px;
+  	bottom: 0;
+  	margin: auto;
+ }
+ .contenidoFichas .item-radio input:checked~.item-content {
+  border-top: 1px solid;
+}
+ .contenidoFichas .item-complex .item-content, .item-radio .item-content{
+	padding: 20px 49px 20px 16px;
+}
 @media screen and (min-width: 480px){
 	.pageLoad{
 		opacity: 0;
