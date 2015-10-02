@@ -49,7 +49,6 @@ angular.module('nepo.directives', [])
 					us,ds,cs,ub,db,cb;
 				abacus = new Abacus({ratio: scene.ratio, stage: scope.stage});
 				abacus.addToStage(scope.stage);
-				
 				ts = new Column({x: abacus.getBounds().width * 15.3 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn1", pieces: 3, scale: scene.ratio});
 				tb = new Column({x: abacus.getBounds().width * 15.3 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn1", scale: scene.ratio});
 				abacus.addChild(ts,tb);
