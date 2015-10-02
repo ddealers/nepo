@@ -29,8 +29,8 @@ uiClasses.factory('Piece', function(PreloaderService){
 			}
 		});
 		this.open = false;
+		this.index = properties.index;
 		this.piece = new createjs.Sprite(this.spritesheet);
-		this.piece.addEventListener('click', this.toggle);
 		this.addChild(this.piece);
 		this.set({x: properties.x, y: properties.y, scaleX: properties.scale, scaleY: properties.scale});
 	};
@@ -47,7 +47,7 @@ uiClasses.factory('Piece', function(PreloaderService){
 		stage.removeChild(this);
 	},
 	Piece.prototype.toggle = function(e){
-		var tgt = e.currentTarget;
+		var tgt = e.currentTarget.piece;
 		if(tgt.open){
 			tgt.gotoAndPlay('close');
 		}else{

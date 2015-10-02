@@ -42,53 +42,53 @@ angular.module('nepo.directives', [])
 				if(abacus) abacus.resize({ratio: scene.ratio, stage: scope.stage});
 			}
 			function handleComplete(){
+				var ts, tb,
+					gus, gds, gcs, gub, gdb, gcb,
+					mus, mds, mcs, mub, mdb, mcb,
+					kus, kds, kcs, kub, kdb, kcb,
+					us,ds,cs,ub,db,cb;
 				abacus = new Abacus({ratio: scene.ratio, stage: scope.stage});
 				abacus.addToStage(scope.stage);
-					var t = new Column({x: abacus.getBounds().width * 15.3 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn1", scale: scene.ratio});
-				abacus.addChild(t);
-				var t = new Column({x: abacus.getBounds().width * 15.3 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn1", scale: scene.ratio});
-				abacus.addChild(t);
+				
+				ts = new Column({x: abacus.getBounds().width * 15.3 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn1", pieces: 3, scale: scene.ratio});
+				tb = new Column({x: abacus.getBounds().width * 15.3 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn1", scale: scene.ratio});
+				abacus.addChild(ts,tb);
 
+				gcb = new Column({x: abacus.getBounds().width * 22 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn2", scale: scene.ratio});
+				gdb = new Column({x: abacus.getBounds().width * 26.5 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn2", scale: scene.ratio});
+				gub = new Column({x: abacus.getBounds().width * 31 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn2", scale: scene.ratio});
+				abacus.addChild(gcb,gdb,gub);
+				gcs = new Column({x: abacus.getBounds().width * 22 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn2", pieces: 3, scale: scene.ratio});
+				gds = new Column({x: abacus.getBounds().width * 26.5 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn2", pieces: 3, scale: scene.ratio});
+				gus = new Column({x: abacus.getBounds().width * 31 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn2", pieces: 3, scale: scene.ratio});
+				abacus.addChild(gcs,gds,gus);
 
-				var g = new Column({x: abacus.getBounds().width * 22 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn2", scale: scene.ratio});
-					var dm = new Column({x: abacus.getBounds().width * 26.5 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn2", scale: scene.ratio});
-				var cm = new Column({x: abacus.getBounds().width * 31 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn2", scale: scene.ratio});
-				abacus.addChild(g,dm,cm);
-				var g = new Column({x: abacus.getBounds().width * 22 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn2", scale: scene.ratio});
-					var dm = new Column({x: abacus.getBounds().width * 26.5 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn2", scale: scene.ratio});
-				var cm = new Column({x: abacus.getBounds().width * 31 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn2", scale: scene.ratio});
-				abacus.addChild(g,dm,cm);
+				mcb = new Column({x: abacus.getBounds().width * 38 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn3", scale: scene.ratio});
+				mdb = new Column({x: abacus.getBounds().width * 42.5 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn3", scale: scene.ratio});
+				mub = new Column({x: abacus.getBounds().width * 47 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn3", scale: scene.ratio});
+				abacus.addChild(mcb,mdb,mub);
+				mcs = new Column({x: abacus.getBounds().width * 38 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn3", pieces: 3, scale: scene.ratio});
+				mds = new Column({x: abacus.getBounds().width * 42.5 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn3", pieces: 3, scale: scene.ratio});
+				mus = new Column({x: abacus.getBounds().width * 47 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn3", pieces: 3, scale: scene.ratio});
+				abacus.addChild(mcs,mds,mus);
 
+				kcb = new Column({x: abacus.getBounds().width * 54 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn4", scale: scene.ratio});
+				kdb = new Column({x: abacus.getBounds().width * 58.5 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn4", scale: scene.ratio});
+				kub = new Column({x: abacus.getBounds().width * 63 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn4", scale: scene.ratio});
+				abacus.addChild(kcb,kdb,kub);
+				kcs = new Column({x: abacus.getBounds().width * 54 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn4", pieces: 3, scale: scene.ratio});
+				kds = new Column({x: abacus.getBounds().width * 58.5 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn4", pieces: 3, scale: scene.ratio});
+				kus = new Column({x: abacus.getBounds().width * 63 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn4", pieces: 3, scale: scene.ratio});
+				abacus.addChild(kcs,kds,kus);
 
-				var m = new Column({x: abacus.getBounds().width * 38 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn3", scale: scene.ratio});
-					var dm = new Column({x: abacus.getBounds().width * 42.5 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn3", scale: scene.ratio});
-				var cm = new Column({x: abacus.getBounds().width * 47 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn3", scale: scene.ratio});
-				abacus.addChild(m,dm,cm);
-				var m = new Column({x: abacus.getBounds().width * 38 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn3", scale: scene.ratio});
-					var dm = new Column({x: abacus.getBounds().width * 42.5 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn3", scale: scene.ratio});
-				var cm = new Column({x: abacus.getBounds().width * 47 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn3", scale: scene.ratio});
-				abacus.addChild(m,dm,cm);
-
-
-				var k = new Column({x: abacus.getBounds().width * 54 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn4", scale: scene.ratio});
-					var dm = new Column({x: abacus.getBounds().width * 58.5 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn4", scale: scene.ratio});
-				var cm = new Column({x: abacus.getBounds().width * 63 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn4", scale: scene.ratio});
-				abacus.addChild(k,dm,cm);
-				var k = new Column({x: abacus.getBounds().width * 54 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn4", scale: scene.ratio});
-					var dm = new Column({x: abacus.getBounds().width * 58.5 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn4", scale: scene.ratio});
-				var cm = new Column({x: abacus.getBounds().width * 63 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn4", scale: scene.ratio});
-				abacus.addChild(k,dm,cm);
-
-
-				var u = new Column({x: abacus.getBounds().width * 70 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn5", scale: scene.ratio});
-					var dm = new Column({x: abacus.getBounds().width * 75 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn5", scale: scene.ratio});
-				var cm = new Column({x: abacus.getBounds().width * 80/ 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn5", scale: scene.ratio});
-				abacus.addChild(u,dm,cm);
-				var u = new Column({x: abacus.getBounds().width * 70 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn5", scale: scene.ratio});
-					var dm = new Column({x: abacus.getBounds().width * 75 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn5", scale: scene.ratio});
-				var cm = new Column({x: abacus.getBounds().width * 80/ 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn5", scale: scene.ratio});
-				abacus.addChild(u,dm,cm);
-
+				cb = new Column({x: abacus.getBounds().width * 70 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn5", scale: scene.ratio});
+				db = new Column({x: abacus.getBounds().width * 75 / 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn5", scale: scene.ratio});
+				ub = new Column({x: abacus.getBounds().width * 80/ 100, y: abacus.getBounds().height * 47.5 / 100, pieceName:"btn5", scale: scene.ratio});
+				abacus.addChild(ub,db,cb);
+				cs = new Column({x: abacus.getBounds().width * 70 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn5", pieces: 3, scale: scene.ratio});
+				ds = new Column({x: abacus.getBounds().width * 75 / 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn5", pieces: 3, scale: scene.ratio});
+				us = new Column({x: abacus.getBounds().width * 80/ 100, y: abacus.getBounds().height * 19 / 100, pieceName:"btn5", pieces: 3, scale: scene.ratio});
+				abacus.addChild(us,ds,cs);
 			}
 			function open(e){
 				e.currentTarget.gotoAndPlay('open');

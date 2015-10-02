@@ -9,15 +9,13 @@
 .menu .scroll-content{
 	background: #A41C43;
 }
-.list a.item{
-	color: #6C0B2C;
-	border-bottom: 1px solid;
-	font-size: 20px;
-}
 .list .item{
 	color: #6C0B2C;
-	border-bottom: 1px solid;
+	border-bottom: 1px solid #6C0B2C;
 	font-size: 20px;
+}
+.list .item h2{
+	color: #6C0B2C;
 }
 .toggle.toggle-assertive input:checked+.track {
   	border-color: #6C0B2C;
@@ -31,9 +29,33 @@
 [nav-bar-transition=ios] [nav-bar=entering] .bar, [nav-bar-transition=ios] [nav-bar=active] .bar{
 	background: #A41C43;
 }
-.has-header{
-	background: url(../img/back.png)no-repeat;
-  	background-size: cover;
+.back1{
+	background: url(../img/back1.jpg)no-repeat;
+	background-size: cover;
+}
+.back2{
+	background: url(../img/back2.jpg)no-repeat;
+	background-size: cover;
+}
+.back3{
+	background: url(../img/back3.jpg)no-repeat;
+	background-size: cover;
+}
+.back4{
+	background: url(../img/back4.jpg)no-repeat;
+	background-size: cover;
+}
+.back5{
+	background: url(../img/back5.jpg)no-repeat;
+	background-size: cover;
+}
+.back6{
+	background: url(../img/back6.jpg)no-repeat;
+	background-size: cover;
+}
+.back7{
+	background: url(../img/back7.jpg)no-repeat;
+	background-size: cover;
 }
 .bar .button.button-icon{
 	color: #fff;
@@ -84,14 +106,39 @@
   	width: 40%;
 }
 /*//////////////////////P A N T A L L A S     F O N D O S/////////////////*/
+/*
 .contenidoThumbnail .list .item{
 	min-height: 100px;
 }
 .contenidoThumbnail .list:last-child{
-	background: #fff;
+	background: rgba(255,255,255,0.25);
 }
 .item-thumbnail-left>img:first-child{
 	border-radius: 0;
+}*/
+.contenidoThumbnail .list {
+	background: #fff;
+}
+.contenidoThumbnail .list .item img{
+	width: 155px;
+  	position: absolute;
+  	right: 35px;
+  	top: 0;
+  	padding: 15px;
+  	bottom: 0;
+  	margin: auto;
+ }
+.contenidoThumbnail .item-radio input:checked~.item-content {
+  border-top: 1px solid;
+}
+.contenidoThumbnail .item-complex .item-content, .contenidoThumbnail .item-radio .item-content{
+	padding: 30px 49px 30px 16px;
+}
+@media screen and (min-width: 480px){
+	.pageLoad{
+		opacity: 0;
+		display: none;
+	}
 }
 /*//////////////////////P A N T A L L A S     F I C H A S/////////////////*/
 .contenidoFichas .list {
@@ -109,7 +156,7 @@
  .contenidoFichas .item-radio input:checked~.item-content {
   border-top: 1px solid;
 }
- .contenidoFichas .item-complex .item-content, .item-radio .item-content{
+.contenidoFichas .item-complex .item-content, .contenidoFichas .item-radio .item-content{
 	padding: 20px 49px 20px 16px;
 }
 @media screen and (min-width: 480px){
