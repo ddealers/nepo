@@ -9,8 +9,8 @@ uiClasses.factory('Column', function(Piece){
 		this.toggle = __bind(this.toggle, this);
 		if(properties.pieces == 3){
 			this.piece1 = new Piece({x: 0, y: 0, scale: properties.scale, pieceName: properties.pieceName, index: 1});
-			this.piece2 = new Piece({x: 0, y: 140 * properties.scale, scale: properties.scale, pieceName: properties.pieceName, index: 2});
-			this.piece3 = new Piece({x: 0, y: 275 * properties.scale, scale: properties.scale, pieceName: properties.pieceName, index: 3});
+			this.piece2 = new Piece({x: 0, y: 43 * properties.scale, scale: properties.scale, pieceName: properties.pieceName, index: 2});
+			this.piece3 = new Piece({x: 0, y: 84 * properties.scale, scale: properties.scale, pieceName: properties.pieceName, index: 3});
 			
 			this.piece1.addEventListener('click', this.toggle);
 			this.piece2.addEventListener('click', this.toggle);
@@ -19,9 +19,9 @@ uiClasses.factory('Column', function(Piece){
 			this.addChild(this.piece3, this.piece2, this.piece1);
 		}else{
 			this.piece1 = new Piece({x: 0, y: 0, scale: properties.scale, pieceName: properties.pieceName, index: 1});
-			this.piece2 = new Piece({x: 0, y: 140 * properties.scale, scale: properties.scale, pieceName: properties.pieceName, index: 2});
-			this.piece3 = new Piece({x: 0, y: 275 * properties.scale, scale: properties.scale, pieceName: properties.pieceName, index: 3});
-			this.piece4 = new Piece({x: 0, y: 402 * properties.scale, scale: properties.scale, pieceName: properties.pieceName, index: 4});
+			this.piece2 = new Piece({x: 0, y: 43 * properties.scale, scale: properties.scale, pieceName: properties.pieceName, index: 2});
+			this.piece3 = new Piece({x: 0, y: 84 * properties.scale, scale: properties.scale, pieceName: properties.pieceName, index: 3});
+			this.piece4 = new Piece({x: 0, y: 125 * properties.scale, scale: properties.scale, pieceName: properties.pieceName, index: 4});
 		
 			this.piece1.addEventListener('click', this.toggle);
 			this.piece2.addEventListener('click', this.toggle);
