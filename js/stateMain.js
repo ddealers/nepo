@@ -12,6 +12,7 @@ var StateMain={
 
     game.scale.forceOrientation(true);
     game.scale.scaleMode = Phaser.ScaleManager.RESIZE;
+    game.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT;
     game.scale.pageAlignHorizontally = true;
     game.scale.pageAlignVertically = true;
   },
@@ -85,6 +86,7 @@ var StateMain={
   },
   _rightWay: function() {
       document.getElementById("wrong_way").style.display="none";
+      game.state.restart();
   },
   _createBar: function(x, y, b) {
     var bar = game.add.sprite(b.scale.x * x,b.scale.y * y, null);
