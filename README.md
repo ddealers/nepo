@@ -1,4 +1,4 @@
-#Nepohualtzintzin
+# Nepohualtzintzin
 
 El Nepohualtzintzin es un instrumento de cálculo de origen prehispánico, utilizado por las culturas olmeca, maya y mexica.
 
