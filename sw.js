@@ -16,7 +16,6 @@ self.addEventListener('install', function(e) {
                 './js/phaser.min.js',
                 './js/main.js',
                 './js/stateMain.js',
-                './js/stateOver.js',
                 './index.html'
             ]).then(function() {
                 self.skipWaiting();
