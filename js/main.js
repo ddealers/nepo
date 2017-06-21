@@ -13,11 +13,15 @@ if('serviceWorker' in navigator){
 window.onload = function(){
   if (screen.width>1500){
     // desktop or laptop
-    game = new Phaser.Game(640,480,Phaser.AUTO,"ph_game");
+    game = new Phaser.Game(640,480,Phaser.AUTO,"app");
   } else {       
     // mobile device
-    game = new Phaser.Game(window.innerWidth,window.innerHeight,Phaser.AUTO,"ph_game");       
+    game = new Phaser.Game(window.innerWidth,window.innerHeight,Phaser.AUTO,"app");       
   }
   game.state.add("StateMain",StateMain);
   game.state.start("StateMain");
+  document.querySelector('.reset').addEventListener('click', function(e){
+    e.preventDefault();
+    game.state.start("StateMain");
+  })
 }

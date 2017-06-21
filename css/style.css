@@ -9,6 +9,17 @@ body{
 }
 header > div {
 	padding: 3px 10px;
+	overflow: hidden;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.reset{
+	color: #fff;
+	text-decoration: none;
 }
 #wrong_way{
 	background: #e8185c;
@@ -49,171 +60,3 @@ header > div {
 #wrong_way .back_lines .icon{
   width: 40%;
 }
-
-/* Empty. Add your own CSS if you like */
-/*////////////////////////MENU */
-/*.menu .bar-header{
-	background: #6C0B2C;
-}
-.bar.bar-stable .title{
-	color: #fff;
-}
-.menu .scroll-content{
-	background: #A41C43;
-}
-.list .item{
-	color: #6C0B2C;
-	border-bottom: 1px solid #6C0B2C;
-	font-size: 20px;
-}
-.list .item h2{
-	color: #6C0B2C;
-}
-.toggle.toggle-assertive input:checked+.track {
-  	border-color: #6C0B2C;
-  	background-color: #6C0B2C;
-}
-.toggle .track{
-	border-color: #FF216E;
-  	background-color: #FF216E;	
-}*/
-/*////////////////////////PANTALLA ABACO */
-/*[nav-bar-transition=ios] [nav-bar=entering] .bar, [nav-bar-transition=ios] [nav-bar=active] .bar{
-	background: #A41C43;
-}
-.back1{
-	background: url(../img/back1.jpg)no-repeat;
-	background-size: cover;
-}
-.back2{
-	background: url(../img/back2.jpg)no-repeat;
-	background-size: cover;
-}
-.back3{
-	background: url(../img/back3.jpg)no-repeat;
-	background-size: cover;
-}
-.back4{
-	background: url(../img/back4.jpg)no-repeat;
-	background-size: cover;
-}
-.back5{
-	background: url(../img/back5.jpg)no-repeat;
-	background-size: cover;
-}
-.back6{
-	background: url(../img/back6.jpg)no-repeat;
-	background-size: cover;
-}
-.back7{
-	background: url(../img/back7.jpg)no-repeat;
-	background-size: cover;
-}
-.bar .button.button-icon{
-	color: #fff;
-}
-[nav-bar-transition=ios] .back-text, [nav-bar-transition=ios] .buttons, [nav-bar-transition=ios] .title{
-	color: #fff;
-}
-[nav-bar-transition="android"] [nav-bar="entering"] .bar, [nav-bar-transition="android"] [nav-bar="active"] .bar{
-	background: rgb(164, 28, 67);
-  	color: #fff;
-}
-.pageLoad{
-	background: #e8185c;
-	height: 100%;
-	width: 100%;
-	position: fixed;
-	top: 0;
-  	left: 0;
-  	opacity: 1;
-  	z-index: 100;
-}
-.pageLoad .back-lines{
-	background: url(../img/lines.png)no-repeat;
-	background-size: contain;
-	width: 100%;
-	height: 100%;
-	position: absolute;
-  	left: 0;
-  	right: 0;
-  	top: 0;
-  	bottom: 0;
-  	margin: auto;
-  	text-align: center;
-}
-.pageLoad .back-lines .logo{
-  	width: 90%;
-  	margin-top: 20%;
-}
-.pageLoad .back-lines p{
-	position: relative;
-	color: #fff;
-	font-size: 18px;
-	line-height: 40px;
-	text-align: center;
-	padding-bottom: 55px;
-}
-.pageLoad .back-lines .icon{
-  	width: 40%;
-}
-/*//////////////////////P A N T A L L A S     F O N D O S/////////////////*/
-/*
-.contenidoThumbnail .list .item{
-	min-height: 100px;
-}
-.contenidoThumbnail .list:last-child{
-	background: rgba(255,255,255,0.25);
-}
-.item-thumbnail-left>img:first-child{
-	border-radius: 0;
-}
-.contenidoThumbnail .list {
-	background: #fff;
-}
-.contenidoThumbnail .list .item img{
-	width: 155px;
-  	position: absolute;
-  	right: 35px;
-  	top: 0;
-  	padding: 15px;
-  	bottom: 0;
-  	margin: auto;
- }
-.contenidoThumbnail .item-radio input:checked~.item-content {
-  border-top: 1px solid;
-}
-.contenidoThumbnail .item-complex .item-content, .contenidoThumbnail .item-radio .item-content{
-	padding: 30px 49px 30px 16px;
-}
-@media screen and (min-width: 480px){
-	.pageLoad{
-		opacity: 0;
-		display: none;
-	}
-}*/
-/*//////////////////////P A N T A L L A S     F I C H A S/////////////////*/
-/*.contenidoFichas .list {
-	background: #fff;
-}
-.contenidoFichas .list .item img{
-	width: 155px;
-  	position: absolute;
-  	right: 35px;
-  	top: 0;
-  	padding: 15px;
-  	bottom: 0;
-  	margin: auto;
- }
- .contenidoFichas .item-radio input:checked~.item-content {
-  border-top: 1px solid;
-}
-.contenidoFichas .item-complex .item-content, .contenidoFichas .item-radio .item-content{
-	padding: 20px 49px 20px 16px;
-}
-@media screen and (min-width: 480px){
-	.pageLoad{
-		opacity: 0;
-		display: none;
-	}
-}*/
