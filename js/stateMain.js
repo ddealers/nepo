@@ -29,19 +29,19 @@ var StateMain={
     this.bottomBar = this._createBar(20, 328, background);
 
     // Pieces
-    this.units = this._createMarblesGroup(584, 50, 'brown_marble', background);
-    this.tens = this._createMarblesGroup(537, 50, 'brown_marble', background);
-    this.hundreds = this._createMarblesGroup(490, 50, 'brown_marble', background);
-    this.munits = this._createMarblesGroup(444, 50, 'green_marble', background);
-    this.mtens = this._createMarblesGroup(398 , 50, 'green_marble', background);
-    this.mhundreds = this._createMarblesGroup(351, 50, 'green_marble', background);
-    this.uunits = this._createMarblesGroup(303, 50, 'brown_marble', background);
-    this.utens = this._createMarblesGroup(258, 50, 'brown_marble', background);
-    this.uhundreds = this._createMarblesGroup(210, 50, 'brown_marble', background);
-    this.muunits = this._createMarblesGroup(165, 50, 'green_marble', background);
-    this.mutens = this._createMarblesGroup(118, 50, 'green_marble', background);
-    this.muhundreds = this._createMarblesGroup(72, 50, 'green_marble', background);
-    this.xunits = this._createMarblesGroup(24, 50, 'yellow_marble', background);
+    this.units = this._createMarblesGroup(584, 35, 'brown_marble', background);
+    this.tens = this._createMarblesGroup(537, 35, 'brown_marble', background);
+    this.hundreds = this._createMarblesGroup(490, 35, 'brown_marble', background);
+    this.munits = this._createMarblesGroup(444, 35, 'green_marble', background);
+    this.mtens = this._createMarblesGroup(398 , 35, 'green_marble', background);
+    this.mhundreds = this._createMarblesGroup(351, 35, 'green_marble', background);
+    this.uunits = this._createMarblesGroup(303, 35, 'brown_marble', background);
+    this.utens = this._createMarblesGroup(258, 35, 'brown_marble', background);
+    this.uhundreds = this._createMarblesGroup(210, 35, 'brown_marble', background);
+    this.muunits = this._createMarblesGroup(165, 35, 'green_marble', background);
+    this.mutens = this._createMarblesGroup(118, 35, 'green_marble', background);
+    this.muhundreds = this._createMarblesGroup(72, 35, 'green_marble', background);
+    this.xunits = this._createMarblesGroup(24, 35, 'yellow_marble', background);
 
     // Initializers
     this._setListeners();
