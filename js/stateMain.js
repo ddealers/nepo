@@ -107,14 +107,14 @@ var StateMain={
   _createMarblesGroup: function(x, y, marble_name, b) {
     var i, group = game.add.group();
     for (i = 0; i < 3; i++) {
-      var marble = group.create(b.scale.x * x, (b.scale.y * 30 * i) + b.scale.y * y, marble_name);
+      var marble = group.create(b.scale.x * x, (b.scale.y * 32 * i) + b.scale.y * y, marble_name);
       marble.scale.setTo(b.scale.x, b.scale.y);
       marble.active = false;
       marble.inputEnabled = true;
       marble.events.onInputDown.add(this._toggleGravity, this);
     }
     for (i = 0; i < 4; i++) {
-      var marble = group.create(b.scale.x * x, (b.scale.y * 30 * i) + b.scale.y * (y + 150), marble_name);
+      var marble = group.create(b.scale.x * x, (b.scale.y * 32 * i) + b.scale.y * (y + 150), marble_name);
       marble.scale.setTo(b.scale.x, b.scale.y);
       marble.active = false;
       marble.inputEnabled = true;
