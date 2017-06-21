@@ -3,14 +3,26 @@
 	margin: 0;
 	font-family: 'Avenir';
 }
-body{
+
+html, body {
+	height: 100%;
+	overflow: hidden;
+}
+body {
 	color: white;
 	background: #A41C43;
+}
+header {
+	height: 10%;
 }
 header > div {
 	padding: 3px 10px;
 	overflow: hidden;
 }
+main {
+	height: 90%;
+}
+
 .left {
 	float: left;
 }
@@ -21,6 +33,7 @@ header > div {
 	color: #fff;
 	text-decoration: none;
 }
+
 #wrong_way{
 	background: #e8185c;
 	height: 100%;

@@ -16,7 +16,7 @@ window.onload = function(){
     game = new Phaser.Game(640,480,Phaser.AUTO,"app");
   } else {       
     // mobile device
-    game = new Phaser.Game(window.innerWidth,window.innerHeight,Phaser.AUTO,"app");       
+    game = new Phaser.Game(window.innerWidth,window.innerHeight*.95,Phaser.AUTO,"app");       
   }
   game.state.add("StateMain",StateMain);
   game.state.start("StateMain");
