@@ -29,19 +29,19 @@ var StateMain={
     this.bottomBar = this._createBar(20, 328, background);
 
     // Pieces
-    this.units = this._createMarblesGroup(584, 35, 'brown_marble', background);
-    this.tens = this._createMarblesGroup(537, 35, 'brown_marble', background);
-    this.hundreds = this._createMarblesGroup(490, 35, 'brown_marble', background);
-    this.munits = this._createMarblesGroup(444, 35, 'green_marble', background);
-    this.mtens = this._createMarblesGroup(398 , 35, 'green_marble', background);
-    this.mhundreds = this._createMarblesGroup(351, 35, 'green_marble', background);
-    this.uunits = this._createMarblesGroup(303, 35, 'brown_marble', background);
-    this.utens = this._createMarblesGroup(258, 35, 'brown_marble', background);
-    this.uhundreds = this._createMarblesGroup(210, 35, 'brown_marble', background);
-    this.muunits = this._createMarblesGroup(165, 35, 'green_marble', background);
-    this.mutens = this._createMarblesGroup(118, 35, 'green_marble', background);
-    this.muhundreds = this._createMarblesGroup(72, 35, 'green_marble', background);
-    this.xunits = this._createMarblesGroup(24, 35, 'yellow_marble', background);
+    this.units = this._createMarblesGroup(584, 30, 'brown_marble', background);
+    this.tens = this._createMarblesGroup(537, 30, 'brown_marble', background);
+    this.hundreds = this._createMarblesGroup(490, 30, 'brown_marble', background);
+    this.munits = this._createMarblesGroup(444, 30, 'green_marble', background);
+    this.mtens = this._createMarblesGroup(398 , 30, 'green_marble', background);
+    this.mhundreds = this._createMarblesGroup(351, 30, 'green_marble', background);
+    this.uunits = this._createMarblesGroup(303, 30, 'brown_marble', background);
+    this.utens = this._createMarblesGroup(258, 30, 'brown_marble', background);
+    this.uhundreds = this._createMarblesGroup(210, 30, 'brown_marble', background);
+    this.muunits = this._createMarblesGroup(165, 30, 'green_marble', background);
+    this.mutens = this._createMarblesGroup(118, 30, 'green_marble', background);
+    this.muhundreds = this._createMarblesGroup(72, 30, 'green_marble', background);
+    this.xunits = this._createMarblesGroup(24, 30, 'yellow_marble', background);
 
     // Initializers
     this._setListeners();
@@ -107,14 +107,14 @@ var StateMain={
   _createMarblesGroup: function(x, y, marble_name, b) {
     var i, group = game.add.group();
     for (i = 0; i < 3; i++) {
-      var marble = group.create(b.scale.x * x, (b.scale.y * 32 * i) + b.scale.y * y, marble_name);
+      var marble = group.create(b.scale.x * x, (b.scale.y * 28 * i) + b.scale.y * y, marble_name);
       marble.scale.setTo(b.scale.x, b.scale.y);
       marble.active = false;
       marble.inputEnabled = true;
       marble.events.onInputDown.add(this._toggleGravity, this);
     }
     for (i = 0; i < 4; i++) {
-      var marble = group.create(b.scale.x * x, (b.scale.y * 32 * i) + b.scale.y * (y + 150), marble_name);
+      var marble = group.create(b.scale.x * x, (b.scale.y * 28 * i) + b.scale.y * (y + 150), marble_name);
       marble.scale.setTo(b.scale.x, b.scale.y);
       marble.active = false;
       marble.inputEnabled = true;
